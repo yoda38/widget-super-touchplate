@@ -571,7 +571,7 @@ cpdefine("inline:com-chilipeppr-widget-super-touchplate", ["chilipeppr_ready", '
           var gcode = "G92 X" + br + "\n";
         }
         else {
-          var gcode = "G10 L2 P" + this.coordOffsetNo + " X" + br + "\n";
+          var gcode = "G10 L20 P" + this.coordOffsetNo + " X" + br + "\n";
         }
         var id = "tp" + this.gcodeCtr++;
         chilipeppr.publish("/com-chilipeppr-widget-serialport/jsonSend", {
@@ -604,7 +604,7 @@ cpdefine("inline:com-chilipeppr-widget-super-touchplate", ["chilipeppr_ready", '
           var gcode = "G92 Y" + br + "\n";
         }
         else {
-          var gcode = "G10 L2 P" + this.coordOffsetNo + " Y" + br + "\n";
+          var gcode = "G10 L20 P" + this.coordOffsetNo + " Y" + br + "\n";
         }
         var id = "tp" + this.gcodeCtr++;
         chilipeppr.publish("/com-chilipeppr-widget-serialport/jsonSend", {
