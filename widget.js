@@ -601,7 +601,7 @@ cpdefine("inline:com-chilipeppr-widget-super-touchplate", ["chilipeppr_ready", '
           gcode = "G28.3 Y" + plateLength + "\n";
         }
         else if (this.coordOffsetNo == 10) { //Allowing G92
-          var gcode = "G92 Y" + plateLength + "\n";
+          var gcode = "G92 Y" + br + "\n";
         }
         else {
           var gcode = "G10 L20 P" + this.coordOffsetNo + " Y" + plateLength + "\n";
