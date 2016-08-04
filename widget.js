@@ -588,7 +588,7 @@ cpdefine("inline:com-chilipeppr-widget-super-touchplate", ["chilipeppr_ready", '
         });
       }
       if (this.runningAxis == "y") {
-        var plateLength = $('com-chilipeppr-widget-super-touchplate .lengthplate').val();
+        var plateLength = $('#com-chilipeppr-widget-super-touchplate .lengthplate').val();
         //Need to offset X and Y by bit diameter so that bit center will be at desired origin when G0 X0 Y0 Z0 is run.
         var br = Number($('#com-chilipeppr-widget-super-touchplate .diameter').val()) / 2*-1;
         if (isNaN(plateLength)) plateLength = 0;
@@ -598,10 +598,10 @@ cpdefine("inline:com-chilipeppr-widget-super-touchplate", ["chilipeppr_ready", '
         //var gcode = "G28.3 Y" + br + "\n";
         var gcode = "";
         if(this.coordOffsetNo == 0) {
-          gcode = "G28.3 Y" + br + "\n";
+          gcode = "G28.3 Y" + plateLength + "\n";
         }
         else if (this.coordOffsetNo == 10) { //Allowing G92
-          var gcode = "G92 Y" + br + "\n";
+          var gcode = "G92 Y" + plateLength + "\n";
         }
         else {
           var gcode = "G10 L20 P" + this.coordOffsetNo + " Y" + plateLength + "\n";
