@@ -282,7 +282,7 @@ cpdefine("inline:com-chilipeppr-widget-super-touchplate", ["chilipeppr_ready", '
       }
       //Start searching!
       var id = "tp" + this.gcodeCtr++;
-      gcode = "G38.2 Z-20 F" + fr + "\n";
+      gcode = "G38.2 Z-30 F" + fr + "\n";
       chilipeppr.publish("/com-chilipeppr-widget-serialport/jsonSend", {
         Id: id,
         D: gcode
@@ -547,7 +547,7 @@ cpdefine("inline:com-chilipeppr-widget-super-touchplate", ["chilipeppr_ready", '
         });
 
         // now back off a bit
-        var gcode = "G91 G0 Z2\n";
+        var gcode = "G91 G0 Z4\nG91 G0 Y25 X25\n";
         var id = "tp" + this.gcodeCtr++;
         chilipeppr.publish("/com-chilipeppr-widget-serialport/jsonSend", {
           Id: id,
@@ -613,7 +613,7 @@ cpdefine("inline:com-chilipeppr-widget-super-touchplate", ["chilipeppr_ready", '
         });
 
         // now back off a bit
-        var gcode = "G91 G0 Y10\nG91 G0 Z25\n";
+        var gcode = "G91 G0 Y10\nG91 G0 Z25\nG91 G0 Y-30\n";
         var id = "tp" + this.gcodeCtr++;
         chilipeppr.publish("/com-chilipeppr-widget-serialport/jsonSend", {
           Id: id,
